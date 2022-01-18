@@ -16,11 +16,11 @@ namespace Cat_Bola_2
             // TO Fix the error:
             // 1. Add the ReadInt method
 
-            
-
             while (true)
             {
                 Console.WriteLine($"{senpi.Bollaz} balls, {senpi.BallsLoaded} loaded.");
+                var senpi_Bollaz  = senpi.Bollaz;
+                var senpi_BallsLoaded = senpi.BallsLoaded;
 
                 if (senpi.IsEmpty()) Console.WriteLine("DANGER!. You're out of ammo");
                 Console.WriteLine("Shoot=Space, Reload = r, Quit = q");
@@ -39,8 +39,6 @@ namespace Cat_Bola_2
                 }
 
                 else if (khoonci == 'q') return;
-
-
 
             }
         }
