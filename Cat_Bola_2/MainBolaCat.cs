@@ -79,5 +79,25 @@ namespace Cat_Bola_2
             return true;                            // the gun is loaded, or false if it isn’t.
         }
 
+
+        public static int ReadInt(int lastUsedValue, string prompt)
+        {
+            Console.Write(prompt + " [" + lastUsedValue + "]: ");
+            string line = Console.ReadLine();
+
+            if (int.TryParse(line, out int value)) //<--Here’s the call to double.TryParse, which works exactly like the int
+                                                         // version except that you need to use double as the output variable type.
+            {
+                Console.WriteLine(" using value " + value);
+                return value;
+
+            }
+            else
+            {
+                Console.WriteLine(" using default value " + lastUsedValue);
+                return lastUsedValue;
+            }
+        }
+
     }
 }

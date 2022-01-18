@@ -6,9 +6,17 @@ namespace Cat_Bola_2
     {
         static void Main(string[] args)
         {
-            MainBolaCat senpi = new MainBolaCat();
+            int numberOfBalls = MainBolaCat.ReadInt(20, "Number of balls");
+            int magazineSize = MainBolaCat.ReadInt(16, "Magazine size");
+
+            Console.Write($"Loaded [false]: ");
+            bool.TryParse(Console.ReadLine(), out bool isLoaded);
+
+            MainBolaCat senpi = new MainBolaCat(numberOfBalls, magazineSize, isLoaded );
             // TO Fix the error:
             // 1. Add the ReadInt method
+
+            
 
             while (true)
             {
