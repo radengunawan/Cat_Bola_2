@@ -12,7 +12,15 @@ namespace Cat_Bola_2
         private int balls = 100;
         //private int ballsLoaded = 0;
 
-        public static int MagazineSize { get; private set; } = 16;
+        public int MagazineSize { get; private set; } = 16;
+
+        // add constructor manually
+        public MainBolaCat(int balls, int MagazineSize, bool loaded)
+        {
+            this.balls = balls;
+            this.MagazineSize = MagazineSize;
+            if (!loaded) Reload();
+        }
 
 
         public int BallsLoaded { get; private set; }
@@ -53,8 +61,6 @@ namespace Cat_Bola_2
         //    get { return this.ballsLoaded; }
         //    set { this.ballsLoaded = value; }
         //}
-
-
         public void Reload()                       // The only way to refill the gun is to summon the
         {                                           // Reload method, which fills the gun with a
             if (this.balls > MagazineSize)         // full magazine, or the  number of balls

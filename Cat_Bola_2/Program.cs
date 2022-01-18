@@ -7,6 +7,8 @@ namespace Cat_Bola_2
         static void Main(string[] args)
         {
             MainBolaCat senpi = new MainBolaCat();
+            // TO Fix the error:
+            // 1. Add the ReadInt method
 
             while (true)
             {
@@ -25,7 +27,7 @@ namespace Cat_Bola_2
                 {
                     //senpi.SetBalls(senpi.GetBalls() + PaintballGun.MAGAZINE_SIZE);
                     // senpi.Bollaz += PaintballGun.MAGAZINE_SIZE;
-                    senpi.Bollaz += MainBolaCat.MagazineSize;
+                    senpi.Bollaz += senpi.MagazineSize;
                 }
 
                 else if (khoonci == 'q') return;
